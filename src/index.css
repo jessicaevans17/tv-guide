@@ -26,8 +26,7 @@ body {
 .cast-page,
 .show-information,
 .cast-information,
-.crew-information,
-.cast-and-crew-card {
+.crew-information {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,7 +35,19 @@ body {
 .show-information,
 .cast-information,
 .crew-information,
-.cast-and-crew-card {
+.cast-and-crew-card,
+.cast,
+.crew {
   border: 2px solid black;
   margin: 2rem 5rem;
+}
+
+.cast-and-crew-card {
+  display: flex;
+  justify-content: space-around;
+}
+
+.cc-pic {
+  border: 1px solid black;
+  padding: 5rem;
 }
