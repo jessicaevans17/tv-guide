@@ -1,10 +1,14 @@
 import React, { Component } from 'react'
 import HelloWorld from './components/HelloWorld'
+import Header from './components/Header'
 
 class App extends Component {
   render() {
-    return <HelloWorld />
-    <p>I'm adding a thing! - Nadia</p>
+    return (
+      <>
+        <Header />
+      </>
+    )
   }
 }
 

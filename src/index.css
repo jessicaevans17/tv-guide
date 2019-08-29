@@ -10,3 +10,15 @@ body {
   margin: 0;
   min-height: 100%;
 }
+
+.webpage-header {
+  padding: 1rem;
+  background-color: orange;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.webpage-header-title {
+  font-size: 40px;
+}
