@@ -11,6 +11,9 @@ body {
   min-height: 100%;
 }
 
+.home-page-main {
+  text-align: center;
+}
 .webpage-header {
   padding: 1rem;
   background-color: orange;
@@ -21,4 +24,8 @@ body {
 
 .webpage-header-title {
   font-size: 40px;
+}
+
+.randomTVimage {
+  width: 35rem;
 }
