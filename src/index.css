@@ -13,7 +13,16 @@ body {
 
 .home-page-main {
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
+.title {
+  padding: 0.25rem;
+}
+.rating {
+  padding: 0.25rem;
+}
+
 .webpage-header {
   padding: 1rem;
   background-color: orange;
@@ -27,5 +36,19 @@ body {
 }
 
 .randomTVimage {
-  width: 35rem;
+  width: 40rem;
+}
+
+.tv-item {
+  width: 15rem;
+}
+
+.tv-item-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tv-item-info {
+  display: flex;
 }
