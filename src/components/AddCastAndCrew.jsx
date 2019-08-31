@@ -7,7 +7,7 @@ const AddCastAndCrew = () => {
   const [crewData, setCrewData] = useState([])
   const fetchData = async () => {
     const resp = await axios.get(
-      "https://api.themoviedb.org/3/tv/100/credits?api_key=02f778ceced92735175a972d795524b5&language=en-US"
+      "https://api.themoviedb.org/3/tv/2/credits?api_key=02f778ceced92735175a972d795524b5&language=en-US"
     )
     setCastData(resp.data.cast)
     setCrewData(resp.data.crew)
@@ -32,8 +32,8 @@ const AddCastAndCrew = () => {
                   src={`https://image.tmdb.org/t/p/w200${item["profile_path"]}`}
                   alt={item.name}
                 />
-                <section>{item.character}</section>
-                <section>{item.name}</section>
+                <section className="character-name">{item.character}</section>
+                <section className="actor-name">{item.name}</section>
               </section>
             )
           })}

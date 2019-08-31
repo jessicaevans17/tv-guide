@@ -32,22 +32,25 @@ body {
   align-items: center;
 }
 
-.show-information,
-.cast-information,
-.crew-information,
-.cast-and-crew-card,
-.cast,
-.crew {
-  border: 2px solid black;
-  margin: 2rem 5rem;
-}
-
 .cast-and-crew-card {
   display: flex;
-  justify-content: space-around;
+  flex-flow: wrap row;
+  justify-content: flex-start;
+}
+
+.cast {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  width: 9rem;
 }
 
 .cc-pic {
-  border: 1px solid black;
-  padding: 5rem;
+  height: 7rem;
+}
+
+.character-name {
+  margin: 1rem 0rem;
 }
