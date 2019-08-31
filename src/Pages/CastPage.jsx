@@ -1,4 +1,5 @@
 import React from "react"
+import AddCastAndCrew from "../components/AddCastAndCrew"
 
 const CastPage = () => {
   return (
@@ -16,46 +17,7 @@ const CastPage = () => {
           </p>
         </section>
         <section className="cast-and-crew-info">
-          <section className="cast-information">
-            <h2>Cast Information</h2>
-            <section className="cast-and-crew-card">
-              <section className="cast">
-                <img className="cc-pic" src="" alt="" />
-                <section>Character Name:</section>
-                <section>Actor Name:</section>
-              </section>
-              <section className="cast">
-                <img className="cc-pic" src="" alt="" />
-                <section>Character Name:</section>
-                <section>Actor Name:</section>
-              </section>
-              <section className="cast">
-                <img className="cc-pic" src="" alt="" />
-                <section>Character Name:</section>
-                <section>Actor Name:</section>
-              </section>
-            </section>
-          </section>
-          <section className="crew-information">
-            <h2>Crew Information</h2>
-            <section className="cast-and-crew-card">
-              <section className="crew">
-                <img className="cc-pic" src="" alt="" />
-                <section>Name</section>
-                <section>Job Title</section>
-              </section>
-              <section className="crew">
-                <img className="cc-pic" src="" alt="" />
-                <section>Name</section>
-                <section>Job Title</section>
-              </section>
-              <section className="crew">
-                <img className="cc-pic" src="" alt="" />
-                <section>Name</section>
-                <section>Job Title</section>
-              </section>
-            </section>
-          </section>
+          <AddCastAndCrew />
         </section>
       </section>
     </>
