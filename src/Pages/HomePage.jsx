@@ -1,7 +1,32 @@
-import React from 'react'
-import Header from '../components/Header'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 
 const HomePage = () => {
+  const [tvImage, setTvImage] = useState([])
+  const [tvTitle, setTvTitle] = useState([])
+  const [tvRating, setTvRating] = useState([])
+  const [currentPage, setCurrentPage] = useState(1)
+
+  const fetchData = async () => {
+    const resp = await axios.get(
+      'https://api.themoviedb.org/3/tv/top_rated?api_key=69d23e9b46d479e367d00ab334350749&language=en-US&page=1'
+    )
+    console.log(resp.data)
+    setTvTitle(resp.data.name)
+    setTvRating(resp.data.vote_average)
+
+    console.log(tvRating)
+    console.log(tvTitle)
+  }
+
+  // const showNextPage = () => {
+  //   setCurrentPage(currentPage + 1)
+  // }
+
+  useEffect(() => {
+    fetchData()
+  }, [])
+
   return (
     <>
       <main className="home-page-main">
@@ -11,6 +36,7 @@ const HomePage = () => {
             className="randomTVimage"
             src="https://i.ytimg.com/vi/l4bDVq-nP-0/maxresdefault.jpg"
           />
+          {/* https://image.tmdb.org/t/p/w200/ */}
           <section className="tv-item-info">
             <h2 className="title">Title</h2>
             <h2 className="rating">Rating</h2>

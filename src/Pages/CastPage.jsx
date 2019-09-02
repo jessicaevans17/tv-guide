@@ -1,4 +1,5 @@
 import React from "react"
+import AddCastAndCrew from "../components/AddCastAndCrew"
 
 const CastPage = () => {
   return (
@@ -16,22 +17,7 @@ const CastPage = () => {
           </p>
         </section>
         <section className="cast-and-crew-info">
-          <section className="cast-information">
-            <h2>Cast Information</h2>
-            <section className="cast-and-crew-card">
-              <img src="" alt="" />
-              <h3>Character Name:</h3>
-              <h3>Actor Name:</h3>
-            </section>
-          </section>
-          <section className="crew-information">
-            <h2>Crew Information</h2>
-            <section className="cast-and-crew-card">
-              <img src="" alt="" />
-              <h3>Name</h3>
-              <h3>Job Title</h3>
-            </section>
-          </section>
+          <AddCastAndCrew />
         </section>
       </section>
     </>

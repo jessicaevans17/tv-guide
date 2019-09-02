@@ -1,9 +1,8 @@
-import React, { Component } from "react"
-import HelloWorld from "./components/HelloWorld"
-import Header from "./components/Header"
-import CastPage from "./Pages/CastPage"
-import HomePage from "./Pages/HomePage"
-import { Route, Switch, BrowserRouter as Router } from "react-router-dom"
+import React, { Component } from 'react'
+import Header from './components/Header'
+import CastPage from './Pages/CastPage'
+import HomePage from './Pages/HomePage'
+import { Route, Switch, BrowserRouter as Router } from 'react-router-dom'
 
 class App extends Component {
   render() {
