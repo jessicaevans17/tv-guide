@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from "react"
+import axios from "axios"
+import { Link } from "react-router-dom"
 
 const HomePage = () => {
   const [tvShow, setTvShow] = useState([])
@@ -52,8 +52,13 @@ const HomePage = () => {
           <ul className="tv-show">
             {tvShow.map((show, i) => {
               return (
-                <li className="item" key={i}>
-                  <Link to={'/cast-page'}>
+                <li className="item" key={i} show={show}>
+                  <Link
+                    to={{
+                      pathname: `/${show.id}`,
+                      state: { show }
+                    }}
+                  >
                     <img
                       src={`https://image.tmdb.org/t/p/w200${show.poster_path}`}
                     />
