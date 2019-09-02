@@ -53,6 +53,16 @@ body {
   display: flex;
 }
 
+.tv-show {
+  display: flex;
+  flex-wrap: wrap;
+  text-decoration: none;
+  list-style-type: none;
+}
+.item {
+  padding: 1rem;
+}
+
 .cast-page,
 .show-information,
 .cast-information,
