@@ -17,8 +17,6 @@ const HomePage = () => {
     setRandom(
       resp.data.results[Math.floor(Math.random) * resp.data.results.length - 1]
     )
-    console.log(tvShow)
-    console.log(random)
   }
 
   const showNextPage = () => {
