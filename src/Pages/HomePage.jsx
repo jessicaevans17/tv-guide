@@ -1,9 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
-import { Link } from 'react-router-dom'
-import CastPage from './CastPage'
-import AddCast from '../components/AddCast'
-import AddCrew from '../components/AddCrew'
+import React, { useEffect, useState } from "react"
+import axios from "axios"
+import { Link } from "react-router-dom"
 
 const HomePage = () => {
   const [tvShow, setTvShow] = useState([[]])
@@ -33,7 +30,7 @@ const HomePage = () => {
       <main className="home-page-main">
         <h1>Top-Rated TV Shows</h1>
         <div>
-          <Link to="/cast-page">
+          <Link to={{ pathname: `/${tvShow[random].id}` }}>
             <img
               src={`https://image.tmdb.org/t/p/w200${tvShow[random].poster_path}`}
             />

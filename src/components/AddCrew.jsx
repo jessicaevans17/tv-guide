@@ -4,8 +4,12 @@ const AddCrew = props => {
   return (
     <>
       <section className="crew">
-        <section>{props.thing.name}</section>
-        <section>{props.thing.job}</section>
+        <section>
+          <span>
+            <strong>{props.thing.job}: </strong>
+          </span>
+          {props.thing.name}
+        </section>
       </section>
     </>
   )
