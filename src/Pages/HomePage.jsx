@@ -9,7 +9,7 @@ const HomePage = () => {
   const [tvShow, setTvShow] = useState([[]])
   const [currentPage, setCurrentPage] = useState(1)
   const [random, setRandom] = useState(0)
-
+  const show = { show }
   const fetchData = async () => {
     const resp = await axios.get(
       `https://api.themoviedb.org/3/tv/top_rated?api_key=69d23e9b46d479e367d00ab334350749&language=en-US&page=${currentPage}`
@@ -26,20 +26,21 @@ const HomePage = () => {
 
   useEffect(() => {
     fetchData()
-  }, [])
+  }, [currentPage])
 
   return (
     <>
       <main className="home-page-main">
         <h1>Top-Rated TV Shows</h1>
         <div>
-          <Link to="/cast-page">
+          <Link to={{ pathname: `/${tvShow[random].id}`, state: { show } }}>
             <img
               src={`https://image.tmdb.org/t/p/w200${tvShow[random].poster_path}`}
             />
-            <h2>Title: {tvShow[random].name}</h2>
+            <h2>{tvShow[random].name}</h2>
           </Link>
           <h3>Rating: {tvShow[random].vote_average}</h3>
+          <p>Description: {tvShow[random].overview}</p>
         </div>
         <section className="tv-item-section">
           <ul className="tv-show">
