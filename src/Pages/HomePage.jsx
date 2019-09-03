@@ -29,15 +29,19 @@ const HomePage = () => {
     <>
       <main className="home-page-main">
         <h1>Top-Rated TV Shows</h1>
-        <div>
-          <Link to={{ pathname: `/${tvShow[random].id}`, state: { show } }}>
-            <img
-              src={`https://image.tmdb.org/t/p/w200${tvShow[random].poster_path}`}
-            />
+        <div className="tv-item-info randomTVimage center">
+          <div className="center">
+            <Link to={{ pathname: `/${tvShow[random].id}`, state: { show } }}>
+              <img
+                src={`https://image.tmdb.org/t/p/w200${tvShow[random].poster_path}`}
+              />
+            </Link>
+          </div>
+          <div className="center">
             <h2>{tvShow[random].name}</h2>
-          </Link>
-          <h3>Rating: {tvShow[random].vote_average}</h3>
-          <p>Description: {tvShow[random].overview}</p>
+            <h3>Rating: {tvShow[random].vote_average}</h3>
+            <p>{tvShow[random].overview}</p>
+          </div>
         </div>
         <section className="tv-item-section">
           <ul className="tv-show">
