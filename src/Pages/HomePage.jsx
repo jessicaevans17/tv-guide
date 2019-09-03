@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-import CastPage from './CastPage'
-import AddCast from '../components/AddCast'
-import AddCrew from '../components/AddCrew'
 
 const HomePage = () => {
   const [tvShow, setTvShow] = useState([[]])
