@@ -19,6 +19,11 @@ const HomePage = () => {
 
   const showNextPage = () => {
     setCurrentPage(currentPage + 1)
+    // if (currentPage > 31) {
+    //   return {
+    //     currentPage = 1
+    //   }
+    // }
   }
 
   useEffect(() => {
@@ -28,7 +33,7 @@ const HomePage = () => {
   return (
     <>
       <main className="home-page-main">
-        <h1>Top-Rated TV Shows</h1>
+        <h1 className="top-title">Top-Rated TV Shows</h1>
         <div className="tv-item-info randomTVimage center">
           <div className="center">
             <Link to={{ pathname: `/${tvShow[random].id}`, state: { show } }}>
@@ -64,7 +69,7 @@ const HomePage = () => {
               )
             })}
           </ul>
-          <p>Page: {currentPage}</p>
+          <p className="page">Page: {currentPage}</p>
 
           <nav>
             <button onClick={showNextPage}>Next</button>
